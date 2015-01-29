@@ -7,7 +7,6 @@ var fs = require('fs');
 var path = require('path');
 var plugins = require('gulp-load-plugins')();
 var gutil = require('gulp-util');
-var buildPosts = require("./buildPosts");
 
 var config = { production: false };
 
