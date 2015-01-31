@@ -6,13 +6,13 @@ Blog con frontend con react y nodejs como backend.
     ├── build : CSS y Javascript compilados para navegador (creado al construir)
     │   ├── css
     │   └── js : Scripts de /src/app/ compilados
-    │       └── vendor : Librerias externas
-    ├── media
+    │       └── vendor : Librerias externas (bower)
+    ├── media : Achvios que se serviran en "/static/media"
     └── src
         ├── app : Scripts principales de cada pagina (jsx)
         ├── component : Componentes de react (jsx)
         ├── styles
-        └── html
+        └── html : html estatico, se sirve en "/"
 ### JSX
 Un componente de react por archivo en `src/component`. Los componentes se referenciaran entre si utilizando `require` (CommonJS). Ejemplo:
 ``` js
@@ -44,7 +44,7 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
 <html>
     <head>
         <script src="static/js/vendor/vendor.js" />
-        <script src="/static/js/index.js" />
+        <script src="static/js/index.js" />
     </head>
     <body></body>
 </html
@@ -57,6 +57,14 @@ $ npm install
 Para construir.
 ``` bash
 $ npm run build
+```
+Para construir continuamente.
+``` bash
+$ npm run watch
+```
+Para construir y minimizar.
+``` bash
+$ npm run deploy
 ```
 Para ejecutar
 ``` bash
