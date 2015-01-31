@@ -11,7 +11,7 @@ Blog con frontend con react y nodejs como backend.
     └── src
         ├── app : Scripts principales de cada pagina (jsx)
         ├── component : Componentes de react (jsx)
-        ├── css
+        ├── styles
         └── html
 ### JSX
 Un componente de react por archivo en `src/component`. Los componentes se referenciaran entre si utilizando `require` (CommonJS). Ejemplo:
