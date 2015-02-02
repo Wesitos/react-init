@@ -1,6 +1,5 @@
 react-init
 ============
-Blog con frontend con react y nodejs como backend.
 ### Estructura de carpetas
     .
     ├── build : CSS y Javascript compilados para navegador (creado al construir)
