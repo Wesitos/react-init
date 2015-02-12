@@ -59,7 +59,7 @@ $ npm run build
 ```
 Para construir continuamente.
 ``` bash
-$ npm run watch
+$ npm run dev
 ```
 Para construir y minimizar.
 ``` bash
