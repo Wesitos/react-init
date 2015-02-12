@@ -51,14 +51,6 @@ gulp.task('clean-js', function(done){
     del(['build/js'], done);
 })
 
-gulp.task('clean-authors', function(done){
-    del(['build/data/autor'], done);
-})
-
-gulp.task('clean-posts', function(done){
-    del(['build/data/post'], done);
-})
-
 gulp.task('vendor', ['clean-js'], function(){
     var vendorPathList = vendorModules.map(function(item){
         var moduleName = config.production?item.prodSource:item.devSource;
