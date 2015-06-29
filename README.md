@@ -1,5 +1,7 @@
 react-init
 ============
+[![Dependency Status](https://david-dm.org/wesitos/react-init.svg)](https://david-dm.org/wesitos/react-init)
+[![devDependency Status](https://david-dm.org/wesitos/react-init/dev-status.svg)](https://david-dm.org/wesitos/react-init#info=devDependencies)
 ### Estructura de carpetas
     .
     ├── build : CSS y Javascript compilados para navegador (creado al construir)
