@@ -3,13 +3,13 @@
   "author": "Pedro Palacios",
   "license": "GPLv3",
   "version": "1.0.0",
-    "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/wesitos/react-init"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesitos/react-init"
   },
   "dependencies": {
     "aliasify": "^1.7.2",
-    "browserify": "^8.1.3",
+    "browserify": "^10.2.4",
     "compression": "^1.5.0",
     "express": "^4.13.0",
     "react": "^0.13.3",
@@ -24,6 +24,7 @@
     "gulp-load-plugins": "^0.8.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.2",
+    "gulp-task-master": "^1.0.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.2"
   },

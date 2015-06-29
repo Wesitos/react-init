@@ -1,0 +1,33 @@
+{
+    "reactApp": {
+        "src": "./src/app/",
+        "extname": "jsx",
+        "build": "./build/static/js/"
+    },
+    "styles": {
+        "css":{
+            "src": "./src/styles/",
+            "extname": "css"
+        },
+        "sass": {
+            "src": "./src/styles/",
+            "extname": "scss"
+        },
+        "build": "./build/static/css/"
+    },
+    "script": {
+        "src": "./src/js",
+        "build": "./build/static/js/"
+    },
+    "vendor": {
+        "require": [
+        "react/addons",
+        "marked",
+        "highlight.js"],
+
+      "build": {
+          "dirname": "./build/static/js/",
+          "name": "vendor.js"
+      }
+    }
+}
