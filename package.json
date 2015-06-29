@@ -1,21 +1,23 @@
 {
   "name": "react-init",
+  "author": "Pedro Palacios",
+  "license": "GPLv3",
   "version": "1.0.0",
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/wesitos/react-init"
+  },
   "dependencies": {
-    "aliasify": "^1.5.1",
-    "bower": "^1.3.12",
-    "browserify": "^8.1.1",
-    "compression": "^1.3.0",
-    "del": "^1.1.1",
-    "express": "^4.11.1",
-    "fluxxor": "^1.5.1",
-    "glob": "^4.3.5",
-    "react": "^0.12.2",
-    "react-router": "^0.11.6",
-    "reactify": "^1.0.0",
+    "aliasify": "^1.7.2",
+    "browserify": "^8.1.3",
+    "compression": "^1.5.0",
+    "express": "^4.13.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
     "vinyl-transform": "^1.0.0"
   },
   "devDependencies": {
+    "del": "^1.2.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.3",
     "gulp-jsoncombine": "^1.0.2",
@@ -33,8 +35,6 @@
   "keywords": [
     "react"
   ],
-  "author": "Pedro Palacios",
-  "license": "GPLv3",
   "browserify": {
     "transform": [
       "reactify",
