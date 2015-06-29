@@ -21,9 +21,8 @@
     },
     "vendor": {
         "require": [
-        "react/addons",
-        "marked",
-        "highlight.js"],
+        "react/addons"
+        ],
 
       "build": {
           "dirname": "./build/static/js/",
