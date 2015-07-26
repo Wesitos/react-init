@@ -3,17 +3,18 @@ react-init
 [![Dependency Status](https://david-dm.org/wesitos/react-init.svg)](https://david-dm.org/wesitos/react-init)
 [![devDependency Status](https://david-dm.org/wesitos/react-init/dev-status.svg)](https://david-dm.org/wesitos/react-init#info=devDependencies)
 ### Estructura de carpetas
-    .
-    ├── build : CSS y Javascript compilados para navegador (creado al construir)
-    │   ├── css
-    │   └── js : Scripts de /src/app/ compilados
-    │       └── vendor : Librerias externas (bower)
-    ├── media : Achvios que se serviran en "/static/media"
-    └── src
-        ├── app : Scripts principales de cada pagina (jsx)
-        ├── component : Componentes de react (jsx)
-        ├── styles
-        └── html : html estatico, se sirve en "/"
+
+    react-init
+    ├── build : Carpeta que se sirve
+    │   └── static: CSS y Javascript compilados para navegador (creado al construir)
+    │       └── css
+    │       └── js  : Apps de react compilados
+    ├── src
+    │   ├── app : Scripts principales de cada pagina (jsx)
+    │   ├── component : Componentes de react (jsx)
+    │   ├── html: html estatico, (se copia a "build/")
+    │   └── styles
+    └── tasks : Scripts de gulp para automatizacion
 ### JSX
 Un componente de react por archivo en `src/component`. Los componentes se referenciaran entre si utilizando `require` (CommonJS). Ejemplo:
 ``` js
@@ -44,7 +45,7 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="static/js/vendor/vendor.js" />
+        <script src="static/js/vendor.js" />
         <script src="static/js/index.js" />
     </head>
     <body></body>
