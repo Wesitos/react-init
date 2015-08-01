@@ -38,7 +38,7 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     // Utilizamos un componente de react en el script
     var Foo = require("../component/Foo.jsx");
     
-    React.render(<Foo/>, document.body);
+    React.render(<Foo/>, document.getElementById("container"));
 ```
 ``` html
 <!-- Archivo: src/html/index.html -->
@@ -46,9 +46,11 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
 <html>
     <head>
         <script src="static/js/vendor.js" />
-        <script src="static/js/index.js" />
     </head>
-    <body></body>
+    <body>
+        <div id="container"></div>
+        <script src="static/js/index.js" />
+    </body>
 </html
 ```
 ### Como utilizar
