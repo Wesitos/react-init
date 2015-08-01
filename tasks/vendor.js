@@ -24,3 +24,4 @@ module.exports =  function(){
         .pipe(gulp.dest(vendorConfig.build.dirname))
         .on('error', gutil.log);
 };
+module.exports.watch = ["package.json", "config.json"];

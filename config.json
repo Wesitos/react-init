@@ -2,7 +2,13 @@
     "reactApp": {
         "src": "./src/app/",
         "extname": "jsx",
-        "build": "./build/static/js/"
+        "build": "./build/static/js/",
+        "watch": "./src/**/*.?(js|jsx)"
+    },
+    "html":{
+        "src": "./src/html",
+        "build": "./build/",
+        "extname": "html"
     },
     "styles": {
         "css":{
