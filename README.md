@@ -16,7 +16,7 @@ react-init
     │   └── styles
     └── tasks : Scripts de gulp para automatizacion
 ### JSX
-Un componente de react por archivo en `src/component`. Los componentes se referenciaran entre si utilizando `require` (CommonJS). Ejemplo:
+Un componente de react por archivo en `src/component`. Los componentes se referenciaran entre si utilizando `require` (CommonJS) o su equivalente en ES6 `import`. Ejemplo:
 ``` js
     /*Archivo: src/component/Foo.jsx */
     
