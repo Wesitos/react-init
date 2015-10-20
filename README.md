@@ -22,7 +22,7 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     
     // Utilizamos el componente Faa que se encuentra en la misma carpeta
     import React from "react";  //var React = require("react");
-    import Faa from "./Faa,jsx""; //var Faa = require("./Faa.jsx");
+    import Faa from "./Faa,jsx"; //var Faa = require("./Faa.jsx");
     
     var Foo = React.createClass({
         render: function(){
