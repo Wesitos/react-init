@@ -21,7 +21,8 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     /*Archivo: src/component/Foo.jsx */
     
     // Utilizamos el componente Faa que se encuentra en la misma carpeta
-    var Faa = require("./Faa.jsx");
+    import React from "react";  //var React = require("react");
+    import Faa from "./Faa,jsx""; //var Faa = require("./Faa.jsx");
     
     var Foo = React.createClass({
         render: function(){
@@ -33,12 +34,13 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     module.exports = Foo;
 ```
 ``` js
-    /* Archivo: src/app/index.jsx */
-    
+/* Archivo: src/app/index.jsx */
+
+    import ReactDOM from "react-dom";       // var ReactDOM = require("react-dom");
     // Utilizamos un componente de react en el script
-    var Foo = require("../component/Foo.jsx");
+    import Foo from "../component/Foo.jsx"; //var Foo = require("../component/Foo.jsx");
     
-    React.render(<Foo/>, document.getElementById("container"));
+    ReactDOM.render(<Foo/>, document.getElementById("container"));
 ```
 ``` html
 <!-- Archivo: src/html/index.html -->
@@ -70,7 +72,7 @@ Para construir y minimizar.
 ``` bash
 $ npm run deploy
 ```
-Para ejecutar
+Para ejecutar un servidor estático
 ``` bash
 $ node app.js
 ```
