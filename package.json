@@ -17,7 +17,7 @@
     "react-dom": "^0.14.0"
   },
   "devDependencies": {
-    "del": "^1.2.0",
+    "del": "^2.0.2",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
