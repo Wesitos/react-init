@@ -27,7 +27,8 @@
     },
     "vendor": {
         "require": [
-        "react/addons"
+            "react",
+            "react-dom"
         ],
 
       "build": {
