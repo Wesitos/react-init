@@ -44,11 +44,11 @@
       "aliasify"
     ]
   },
-    "appliesTo": {
-      "includeExtensions": [
-        ".js",
-        ".jsx"
-      ]
-    }
+  "appliesTo": {
+    "includeExtensions": [
+      ".js",
+      ".jsx"
+    ]
   }
+}
 }
