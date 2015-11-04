@@ -5,13 +5,13 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https:\/\/github.com\/wesitos\/react-init"
+    "url": "https://github.com/wesitos/react-init"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
-    "babelify": "^6.4.0",
-    "browserify": "^11.0.0",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
     "compression": "^1.5.0",
     "express": "^4.13.0",
     "react": "^0.14.2",
