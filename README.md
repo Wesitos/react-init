@@ -22,7 +22,7 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     
     // Utilizamos el componente Faa que se encuentra en la misma carpeta
     import React from "react";  //var React = require("react");
-    import Faa from "./Faa.jsx"; //var Faa = require("./Faa.jsx");
+    import {Faa} from "./Faa.jsx"; //var Faa = require("./Faa.jsx").Faa;
     
     var Foo = React.createClass({
         render: function(){
@@ -31,14 +31,14 @@ Un componente de react por archivo en `src/component`. Los componentes se refere
     });
     /* Al final de cada componente, hay que almacenarlo en module.exports
        para que pueda ser utilizado */
-    module.exports = Foo;
+    exports {Foo};
 ```
 ``` js
 /* Archivo: src/app/index.jsx */
 
     import ReactDOM from "react-dom";       // var ReactDOM = require("react-dom");
     // Utilizamos un componente de react en el script
-    import Foo from "../component/Foo.jsx"; //var Foo = require("../component/Foo.jsx");
+    import {Foo} from "../component/Foo.jsx"; //var Foo = require("../component/Foo.jsx").Foo;
     
     ReactDOM.render(<Foo/>, document.getElementById("container"));
 ```
