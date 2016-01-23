@@ -14,15 +14,34 @@ var browserifyGlob = Path.join(appConfig.src, "**",
 
 module.exports = function (){
     return gulp.src(browserifyGlob)
+        .pipe(plugins.plumber())
         .pipe(through.obj(function( file, enc, cb) {
+            var self = this;
             browserify(file.path)
             .external(config.vendor.require)
                 .bundle(function(err, res){
                     gutil.log('browserify', file.relative);
-                    if(file.isBuffer())
+                    if(file.isBuffer() && res)
                         file.contents = res;
-                    cb(null, file);});
+                    else
+                        file.contents = null;
+                    cb(null, file);
+                })
+                .on('error', function(err){
+                    gutil.log(
+                        gutil.colors.red("Browserify compile error:"),
+                        err.message,
+                        "\n\t",
+                        gutil.colors.cyan("in file"),
+                        file.path,
+                        err.stack);
+                    this.emit("end");
+                });
         }))
+        .on('error', function(err){
+            console.log(err.stack);
+            this.emit("end");
+        })
         .pipe(plugins.rename({extname: ".js"}))
         .pipe(gulp.dest(appConfig.build))
         .pipe(plugins.uglify())
