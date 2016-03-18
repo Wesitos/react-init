@@ -9,6 +9,8 @@ var buffer = require('vinyl-buffer');
 
 var vendorConfig = require("../config.json").vendor;
 
+var production = plugins.environments.production();
+
 module.exports =  function(){
     var b = browserify();
     vendorConfig.require.forEach(function(library){
@@ -19,8 +21,7 @@ module.exports =  function(){
         .pipe(source(vendorConfig.build.name))
         .pipe(buffer())
         .pipe(gulp.dest(vendorConfig.build.dirname))
-        .pipe(plugins.uglify())
-        .pipe(plugins.rename({suffix:"-min"}))
+        .pipe(production?plugins.uglify():gutil.noop())
         .pipe(gulp.dest(vendorConfig.build.dirname))
         .on('error', gutil.log);
 };

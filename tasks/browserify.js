@@ -8,9 +8,11 @@ var browserify = require('browserify');
 var Path = require('path');
 
 var config = require("../config.json");
-var appConfig = config.reactApp;
+var appConfig = config.browserify;
 var browserifyGlob = Path.join(appConfig.src, "**",
                                ["*", appConfig.extname].join("."));
+
+var production = plugins.environments.production();
 
 module.exports = function (){
     return gulp.src(browserifyGlob)
@@ -44,9 +46,6 @@ module.exports = function (){
         })
         .pipe(plugins.rename({extname: ".js"}))
         .pipe(gulp.dest(appConfig.build))
-        .pipe(plugins.uglify())
-        .pipe(plugins.rename({suffix:"-min"}))
-        .pipe(gulp.dest(appConfig.build))
+        .pipe(production?plugins.uglify():gutil.noop())
         .on('error', gutil.log);
 };
-module.exports.watch = Path.normalize(appConfig.watch);

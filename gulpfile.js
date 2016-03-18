@@ -8,12 +8,17 @@ var gulp = require('gulp-task-master')({
 
 gulp.task('styles', ['css', 'sass']);
 
-gulp.task('default', ['vendor', 'browserify', 'minify-css', 'html']);
+gulp.task('default', [
+  'browserify',
+  'vendor',
+  'styles',
+  'html',
+]);
 
 gulp.task('watch', [
-    'html.watch',
-    'css.watch',
-    'sass.watch',
-    'vendor.watch',
-    'browserify.watch'
+  'watchify',
+  'html.watch',
+  'css.watch',
+  'sass.watch',
+  'vendor.watch',
 ]);

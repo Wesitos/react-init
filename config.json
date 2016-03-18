@@ -1,9 +1,8 @@
 {
-    "reactApp": {
+    "browserify": {
         "src": "./src/app/",
         "extname": "jsx",
-        "build": "./build/static/js/",
-        "watch": "./src/**/*.?(js|jsx)"
+        "build": "./build/static/js/"
     },
     "html":{
         "src": "./src/html",
