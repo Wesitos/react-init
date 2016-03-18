@@ -8,8 +8,10 @@ var stylesConf = require("../config.json").styles;
 var sassGlob = Path.join(stylesConf.sass.src, "**", ["*.", stylesConf.sass.extname].join(""));
 
 module.exports = function(){
-    return gulp.src(sassGlob)
+  return gulp.src(sassGlob)
+        .pipe(plugins.plumber())
         .pipe(plugins.sass())
+        .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(stylesConf.build));
 };
 

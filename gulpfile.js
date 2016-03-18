@@ -12,7 +12,17 @@ gulp.task('default', [
   'browserify',
   'vendor',
   'styles',
+  'postcss',
   'html',
+]);
+
+gulp.task('set-production', function(cb){
+  process.env.NODE_ENV = 'production';
+  cb();
+});
+
+gulp.task('deploy', [
+  'default'
 ]);
 
 gulp.task('watch', [

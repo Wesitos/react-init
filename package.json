@@ -19,13 +19,15 @@
     "react-dom": "^0.14.6"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "cssnano": "^3.5.2",
     "del": "^2.0.2",
+    "glob": "^7.0.3",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.4.3",
     "gulp-environments": "^0.1.1",
     "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-minify-css": "^1.2.0",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.1.0",
     "gulp-task-master": "^1.0.0",
