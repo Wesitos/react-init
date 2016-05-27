@@ -9,7 +9,7 @@ var buffer = require('vinyl-buffer');
 
 var vendorConfig = require("../config.json").vendor;
 
-var production = plugins.environments.production();
+var production = process.env.NODE_ENV === 'production';
 
 module.exports =  function(){
     var b = browserify();
