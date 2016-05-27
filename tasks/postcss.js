@@ -9,13 +9,15 @@ var Path = require('path');
 var stylesConf = require('../config.json').styles;
 var cssGlob = Path.join(stylesConf.build, '**', ['*.', 'css'].join(''));
 
+var production = process.env.NODE_ENV === 'production';
+
 var processors = [
     autoprefixer(),
 ];
 
-if (plugins.environments.production()){
+if (production){
   processors.push(cssnano());
-};
+}
 
 module.exports = function(){
     return gulp.src(cssGlob)

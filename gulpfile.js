@@ -21,9 +21,13 @@ gulp.task('set-production', function(cb){
   cb();
 });
 
-gulp.task('deploy', [
-  'default'
-]);
+// Workaround until gulp 4 is released
+var runSequence = require('run-sequence');
+
+gulp.task('deploy', function(cb){
+  runSequence('set-production', 'build', cb);
+});
+// End workaround
 
 gulp.task('watch', [
   'watchify',

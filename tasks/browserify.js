@@ -12,13 +12,12 @@ var appConfig = config.browserify;
 var browserifyGlob = Path.join(appConfig.src, "**",
                                ["*", appConfig.extname].join("."));
 
-var production = plugins.environments.production();
+var production = process.env.NODE_ENV === 'production';
 
 module.exports = function (){
     return gulp.src(browserifyGlob)
         .pipe(plugins.plumber())
         .pipe(through.obj(function( file, enc, cb) {
-            var self = this;
             browserify(file.path)
             .external(config.vendor.require)
                 .bundle(function(err, res){
@@ -41,7 +40,7 @@ module.exports = function (){
                 });
         }))
         .on('error', function(err){
-            console.log(err.stack);
+          gutil.log('browserify', err.stack);
             this.emit("end");
         })
         .pipe(plugins.rename({extname: ".js"}))
